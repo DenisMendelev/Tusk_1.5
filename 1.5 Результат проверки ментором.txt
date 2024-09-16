@@ -1,0 +1,9 @@
+Ховер карточкам или кнопки внутри нее, это же интерактиный элеимент
+Плюс на мобиле слишком высокий тайтл, посмотри на макет
+В остальном визуально - ок
+https://github.com/DenisMendelev/Tusk_1.5/blob/main/index.html#L16 - сделай список
+logo_content - посмтри нейминг, которого вам нужно придерживаться и так со всеми классами ниже
+https://github.com/DenisMendelev/Tusk_1.5/blob/main/index.html#L79 - замени на спан
+https://github.com/DenisMendelev/Tusk_1.5/blob/main/index.html#L13 - используй тег заголовка
+https://github.com/DenisMendelev/Tusk_1.5/blob/main/index.js#L12 - 
+уже устал об говорить, но это можно было сделать в 2 строчки через стили
