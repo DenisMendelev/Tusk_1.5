@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let showButton = document.getElementById("showButton");
-  let brandsButtons = document.querySelectorAll(".brands__button-container");
+  let brandsButtons = document.querySelectorAll(".brands-list__item");
   let showButtonImg = document.querySelector(".show__button-img");
 
   let isHidden = true;

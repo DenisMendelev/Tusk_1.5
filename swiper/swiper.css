@@ -10,6 +10,11 @@
     background-color: #B5B6BC;
 }
 
+.swiper-horizontal {
+	touch-action: pan-y;
+	overflow: hidden;
+}
+
 @media (min-width: 768px) {
 	.swiper-pagination {
 		display: hidden;
