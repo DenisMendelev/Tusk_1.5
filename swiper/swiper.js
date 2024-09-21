@@ -1,4 +1,5 @@
 const swiper = new Swiper('.mySwiper', {
+	speed: 600,
   breakpoints: {
     768: {
       enabled: false
