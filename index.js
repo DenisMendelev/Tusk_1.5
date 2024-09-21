@@ -1,47 +1,47 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let showButton = document.getElementById("showButton");
-    let logoButtons = document.querySelectorAll(".logo__button-container");
-    let showButtonImg = document.querySelector(".show__button-img");
+document.addEventListener("DOMContentLoaded", function () {
+  let showButton = document.getElementById("showButton");
+  let brandsButtons = document.querySelectorAll(".brands__button-container");
+  let showButtonImg = document.querySelector(".show__button-img");
 
-    let isHidden = true;
+  let isHidden = true;
 
-    function toggleLogoVisibility() {
-        
-        logoButtons.forEach(function(logoButton) {
-            if (window.innerWidth >= 1120) {
-                if (logoButton.classList.contains("logo-9") ||
-                    logoButton.classList.contains("logo-10") || 
-                    logoButton.classList.contains("logo-11")
-                ){
-                    logoButton.style.display = isHidden ? "none" : "block"; 
-                }
-            } else  {
-                if (logoButton.classList.contains("logo-7") ||
-                    logoButton.classList.contains("logo-8") || 
-                    logoButton.classList.contains("logo-9") ||
-                    logoButton.classList.contains("logo-10") || 
-                    logoButton.classList.contains("logo-11")
-                ){
-                    logoButton.style.display = isHidden ? "none" : "block";
-                }
-            }
-        });
-    }
-
-    toggleLogoVisibility();
-		
-    showButton.addEventListener("click", function() {
-        isHidden = !isHidden;
-        toggleLogoVisibility();
-
-        showButtonImg.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
-
-        let buttonText = showButton.querySelector(".show__button-text");
-        buttonText.textContent = isHidden ? "Показать все" : "Скрыть";
+  function toggleBrandsVisibility() {
+    brandsButtons.forEach(function (brandsButton) {
+      if (window.innerWidth >= 1120) {
+        if (brandsButton.classList.contains("brands-9") || 
+            brandsButton.classList.contains("brands-10") ||
+            brandsButton.classList.contains("brands-11") 
+           ) {
+          brandsButton.style.display = isHidden ? "none" : "block";
+        } else {
+          brandsButton.style.display = "block";
+        }
+      } else {
+        if (brandsButton.classList.contains("brands-7") ||
+            brandsButton.classList.contains("brands-8") ||
+            brandsButton.classList.contains("brands-9") ||
+            brandsButton.classList.contains("brands-10") ||
+            brandsButton.classList.contains("brands-11")
+           ) {
+          brandsButton.style.display = isHidden ? "none" : "block";
+        } else {
+          brandsButton.style.display = "block";
+        }
+      }
     });
+  }
 
-    window.addEventListener("resize", function() {
-        toggleLogoVisibility();
-    });
+  toggleBrandsVisibility();
+  window.addEventListener('resize', toggleBrandsVisibility);
+
+  showButton.addEventListener("click", function () {
+    isHidden = !isHidden;
+    toggleBrandsVisibility();
+
+    showButtonImg.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
+
+    let buttonText = showButton.querySelector(".show__button-text");
+    buttonText.textContent = isHidden ? "Показать все" : "Скрыть";
+  });
 });
 

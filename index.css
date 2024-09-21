@@ -59,23 +59,21 @@ h2 {
 	font-weight: normal;
 	line-height: 24px;
 	letter-spacing: -0.2px;
-	height: 50px;
 	background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
-	padding: 16px 16px; 
+	padding: 25px 16px; 
 	border-top: 2px solid #D9FFF5;
 }
 
-.logo__button-container {
+.brands__button-container {
 	position: relative;
-	gap: 16px;
 	background-color:white;
 	width: 240px;
 	height: 72px;
 	margin: 16px;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
-.logo__button {
+.brands__button {
 	position: relative;
 	background-color:white;
 	width: 240px;
@@ -83,27 +81,27 @@ h2 {
 	border-radius: 10px;
 }
 
-.logo__button:hover {
+.brands__button:hover {
 	background: linear-gradient(rgb(255,255,255), rgb(240,240,240));
-	border: 1px solid #7E7E82;
+	border: 0.5px solid #7E7E82;
 	transition: 0.15s;
 }
-.logo__button:active {
+.brands__button:active {
 	transform: scale(0.95);
 	box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
 
-.logo__img {
+.brands__img {
 	display: flex;
 	padding-left: 16px;
 }
 
-.logo__img:active {
+.brands__img:active {
 	transform: translateY(1px);
 	transition: 0.1s;
 }
 
-.logo__button::before {
+.brands__button::before {
 	content: " ";
 	position: absolute;
 	background: url(img/go.svg);
@@ -123,17 +121,20 @@ h2 {
     }
 		
     .title-2 {
-				height: 56px;
-				margin-left: 24px;
+			padding: 30px 24px; 
     }
 
-    .logo__content {
+    .brands__content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px 32px;
-        margin-top: 24px;
-        margin-left: 24px
+        gap: 16px 24px;
+				margin-top: 20px;
+				margin-left: 20px;
     }
+
+		.brands__button-container {
+			margin: 0px;
+		}
 
     .сontent__show-button {
         display: flex;
@@ -165,25 +166,21 @@ h2 {
         border: none;
         cursor: pointer;
 		}
-
-    .swiper-pagination {
-        display: none;
-		}
 	}
 
 @media (min-width: 1120px) {
+	.brands__content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 16px 32px;
+}
+
+		.logo-7, .logo-8 {
+			display: block;
+		}
+
     .logo-9, .logo-10, .logo-11 {
         display: none; 
-    }
-
-    .logo__content {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px 32px;
-    }
-
-    .swiper-pagination {
-        display: none;
     }
 }
 
